@@ -1,4 +1,5 @@
 export interface Bolo {
+    categorias: any;
     descricao: string;
     nome: string;
     id: string | undefined;
