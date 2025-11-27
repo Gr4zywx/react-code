@@ -9,7 +9,8 @@ import Carrossel from '../../components/Carrossel/Carrossel';
 import Header from '../../components/Header/Header';
 import { useLocation, useParams } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
-import jacquin404 from
+import jacquin404 from '../../assets/jacquin-not-found.png'
+
 
 
 
@@ -26,7 +27,7 @@ export default function Produtos() {
         try {
             const dados = await getBolos();
             if (categoria) {
-                const dados_filtrados = dados.filter(b => b.categorias.some(cat =>
+                const dados_filtrados = dados.filter(b => b.categorias.some((cat: string) =>
                     cat.toLowerCase() === categoria.toLowerCase()));
                 setBolos(dados_filtrados);
             }
